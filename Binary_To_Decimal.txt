@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <stdbool.h>
+int transf_2v10(int binarna);
+
+int main()
+{
+	int bin_Num;
+	printf("Type a binary number: ");
+	scanf("%d",&bin_Num);
+	printf("Decimal value %d of is: %d.\n", bin_Num,transf_2v10(bin_Num));	
+}
+	
+	
+	
+	//FUNCTION PROTOTYPE
+	
+		/*	
+			+Funtion transforms a number from binary to decimal		
+		*/
+			int transf_2v10(int binarna){
+
+				int result = 0,i = 0,bit;
+				while (binarna != 0){
+					bit = binarna%10;
+					binarna = binarna/10;
+					result += bit*pow(2,i);
+					i++;
+				}
+				return result;
+			}
