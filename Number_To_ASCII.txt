@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <stdbool.h>
+
+//DEFINITION OF FUNCTIONS AND GLOBAL VARIABLES
+	char* pretvorba_v_array (int a);
+	char result[5] = {0,0,0,0,0};
+
+
+int main()
+{
+	int number;
+	printf("Type a number: ");
+	scanf("%d", &number);
+	printf("Result: %s \n",pretvorba_v_array(number));
+	
+
+}
+	//FUNCTION PROTOTYPE
+
+		/*
+			FROM NUMBER TO ASCII
+			+Function reads a number int a 
+			+Transforms it to ASCII code 
+			+returns an pointer to global variable char result
+		*/
+				char* pretvorba_v_array (int a){
+					int j = 0;
+					while (j<4){
+						result[j] = 0;
+						j++;
+					}
+					int i = (int)(log10(a));
+					while (a != 0){
+						result[i] = a%10 + 48;
+						a = a/10;
+						i--;
+					}
+					return result;
+				}
