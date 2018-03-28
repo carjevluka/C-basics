@@ -17,8 +17,8 @@ int main()
 	//FUNCTION PROTOTYPE
 	
 		/*	
-			+Funtion transforms a number from binary to decimal		
-		*/
+		 *Funtion transforms a number from binary to decimal		
+		 */
 			int transf_2v10(int binarna){
 
 				int result = 0,i = 0,bit;
