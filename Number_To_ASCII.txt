@@ -20,11 +20,12 @@ int main()
 	//FUNCTION PROTOTYPE
 
 		/*
-			FROM NUMBER TO ASCII
-			+Function reads a number int a 
-			+Transforms it to ASCII code 
-			+returns an pointer to global variable char result
-		*/
+		 *FROM NUMBER TO ASCII
+		 *Function reads a number int a 
+		 *Transforms it to ASCII code 
+		 *returns an pointer to global variable char result
+		 *
+		 */
 				char* to_array (int a){
 					int j = 0;
 					while (j<4){
